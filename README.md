@@ -16,7 +16,7 @@ When the user presses the BTNC button, the CPU reads the button state through a 
 
 ## Development Environment
 
-- Vivado Design Suite: [Fill in your version]
+- Vivado Design Suite: [2019.1]
 - RISC-V Toolchain: riscv32-unknown-elf-gcc
 - Programming Language: Verilog HDL, C
 
