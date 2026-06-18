@@ -1,4 +1,3 @@
-# riscv-electronic-dice-basys3
 # RISC-V Electronic Dice System on Basys 3 FPGA
 
 ## Project Overview
