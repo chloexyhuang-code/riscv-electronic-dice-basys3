@@ -1,0 +1,113 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jun 16 14:17:03 2026
+| Host         : hp-VICTUS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
+| Design       : top_module
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    35 |
+|    Minimum number of control sets                        |    35 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    48 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    35 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    28 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           34 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              46 |           27 |
+| Yes          | No                    | No                     |             211 |           78 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             133 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+-----------------------------+------------------+----------------+
+|  Clock Signal  |              Enable Signal              |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------+-----------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | cpu/mem_addr[31]_i_1_n_0                | cpu/mem_wstrb[3]_i_1_n_0    |                1 |              4 |
+|  clk_IBUF_BUFG | cpu/is_lui_auipc_jal_jalr_addi_add_sub0 | cpu/instr_lhu_i_1_n_0       |                2 |              5 |
+|  clk_IBUF_BUFG | cpu/latched_rd[4]_i_1_n_0               | btnU_IBUF                   |                2 |              5 |
+|  clk_IBUF_BUFG | cpu/mem_ready                           | cpu/mem_rdata_q[31]_i_1_n_0 |                2 |              7 |
+|  clk_IBUF_BUFG | cpu/cpu_state[7]_i_2_n_0                | cpu/cpu_state[7]_i_1_n_0    |                2 |              7 |
+|  clk_IBUF_BUFG | cpu/is_lui_auipc_jal_jalr_addi_add_sub0 | cpu/decoded_imm[19]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | cpu/is_lui_auipc_jal_jalr_addi_add_sub0 | cpu/decoded_imm[31]_i_1_n_0 |                2 |             12 |
+|  clk_IBUF_BUFG | cpu/mem_ready                           |                             |                4 |             18 |
+|  clk_IBUF_BUFG | cpu/is_lui_auipc_jal_jalr_addi_add_sub0 |                             |               10 |             21 |
+|  clk_IBUF_BUFG | cpu/is_lui_auipc_jal_jalr_addi_add_sub0 | btnU_IBUF                   |                9 |             23 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[10]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[10]_2                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[11]_2                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[10]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[11]_3                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[10]_3                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[11]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr_reg[11]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[1]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[3]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[3]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[2]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[0]_0                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[1]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[0]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wdata[31]_i_1_n_0               |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_wstrb_reg[2]_1                  |                             |                8 |             32 |
+|  clk_IBUF_BUFG | cpu/reg_op1[31]_i_1_n_0                 |                             |               17 |             32 |
+|  clk_IBUF_BUFG | cpu/reg_op2[31]_i_1_n_0                 |                             |               11 |             32 |
+|  clk_IBUF_BUFG | cpu/mem_addr[31]_i_1_n_0                |                             |               18 |             33 |
+|  clk_IBUF_BUFG | cpu/instr_lui0                          |                             |               10 |             43 |
+|  clk_IBUF_BUFG |                                         | btnU_IBUF                   |               27 |             46 |
+|  clk_IBUF_BUFG |                                         |                             |               34 |             58 |
+|  clk_IBUF_BUFG | cpu/reg_next_pc                         | btnU_IBUF                   |               21 |             62 |
+|  clk_IBUF_BUFG | cpu/cpuregs_reg_r1_0_31_0_5_i_1_n_0     |                             |               12 |             96 |
++----------------+-----------------------------------------+-----------------------------+------------------+----------------+
+
+
