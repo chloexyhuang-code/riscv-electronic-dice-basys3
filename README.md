@@ -46,3 +46,33 @@ When the user presses the BTNC button, the CPU reads the button state through a 
 - Student ID: 1123707
 - Course: EEB318A Digital System Design with Lab
 - Yuan Ze University
+
+## Project Structure
+
+text
+src/                Verilog source files
+xdc/                Constraint files
+dice.c              RISC-V application program
+firmware32.hex      Compiled firmware image
+riscv-electronic-dice-basys3.xpr   Vivado project file
+
+## How to Build
+
+1. Open riscv-electronic-dice-basys3.xpr using Vivado.
+2. Generate or update firmware32.hex from `dice.c`.
+3. Run Synthesis.
+4. Run Implementation.
+5. Generate Bitstream.
+6. Open Hardware Manager and program the Basys 3 FPGA board.
+
+## Known Issues
+
+- The system uses polling instead of interrupts.
+- Only one seven-segment digit is enabled.
+- Some Vivado-generated files are included to preserve the complete project environment.
+
+## Demonstration Video
+
+Watch the hardware demonstration here:
+
+https://youtube.com/shorts/Sp-BxC_RyeI?si=Lt1EyCvOf7aA283N
